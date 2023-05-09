@@ -1,0 +1,48 @@
+.btn-rules {
+  background-color: transparent;
+  border-style: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.8em;
+  width: 110px;
+}
+
+.btn-rule-box {
+  display: flex;
+  justify-content: end;
+}
+
+.rules-box {
+  position: absolute;
+  top: 200px;
+  left: 550px;
+  background-color: white;
+  width: 300px;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.rules-text-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rules-text-box p {
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: hsl(229, 25%, 31%);
+}
+
+.rules-text-box div {
+  cursor: pointer;
+}
+
+.rule-img-box {
+  width: 200px;
+  margin: 15px auto;
+}

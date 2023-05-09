@@ -4,6 +4,7 @@ import { SelectOne } from "./Components/SelectOne/SelectOne";
 import { Combat } from "./Components/Combat/Combat";
 
 import "./App.css";
+import { Rules } from "./Components/Rules/Rules";
 function App() {
   const [score, setScore] = useState(0);
   const [selection, setSelection] = useState("");
@@ -43,6 +44,7 @@ function App() {
       ) : (
         <SelectOne setSelection={setSelection} />
       )}
+      <Rules />
     </div>
   );
 }
