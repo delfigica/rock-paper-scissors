@@ -45,3 +45,28 @@
 .scissors-box:hover {
   border: 15px solid hsl(40, 84%, 53%);
 }
+
+@media (max-width: 600px) {
+  .select-box {
+    width: 100%;
+    background-size: 180px;
+  }
+  .option-box {
+    width: 100px;
+    height: 100px;
+    padding: 1.2em;
+    margin: 15px 20px;
+  }
+
+  .paper-box {
+    border: 10px solid hsl(230, 89%, 62%);
+  }
+
+  .rock-box {
+    border: 10px solid hsl(349, 71%, 52%);
+  }
+
+  .scissors-box {
+    border: 10px solid hsl(39, 89%, 49%);
+  }
+}

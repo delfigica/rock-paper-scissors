@@ -1,10 +1,11 @@
 import React from "react";
 
 import "./result.css";
-export const Result = ({ resultData = "win", setSelection, setComputer }) => {
+export const Result = ({ resultData = "win", setSelection, setComputer, setResult }) => {
   const handleReset = () => {
     setSelection("");
     setComputer("");
+    setResult(false)
   };
 
   return (

@@ -32,3 +32,22 @@
     color: hsl(229, 25%, 31%);
     font-size: 2.4em;
 }
+
+@media (max-width: 600px) {
+    .score-box {
+        width: 95%;
+    }
+    .score-logo-box {
+        width: 90px;
+    }
+    .score-total-box {
+        width: 70px;
+        height: 70px;
+    }
+    .score-total-box h3 {
+        font-size: 2em;
+    }
+    .score-total-box p {
+        font-size: .7em;
+    }
+}

@@ -46,3 +46,38 @@
   width: 200px;
   margin: 15px auto;
 }
+
+.close-rule-responsive {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .btn-rule-box {
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .rules-box {
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  .rule-img-box {
+    width: 100%;
+    margin: auto;
+  }
+  .close-rule-responsive {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    margin: 0 auto;
+  }
+  .rules-text-box div {
+    display: none;
+  }
+  .rules-text-box p {
+    margin: auto;
+  }
+}

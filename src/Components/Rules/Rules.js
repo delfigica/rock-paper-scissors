@@ -27,6 +27,12 @@ export const Rules = () => {
         <div className="rule-img-box">
           <img src={rulesImage} />
         </div>
+        <div
+          className="close-rule-responsive"
+          onClick={() => setOpenRules(false)}
+        >
+          <img src={close} />
+        </div>
       </div>
     </>
   );

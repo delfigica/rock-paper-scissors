@@ -22,3 +22,9 @@
     color: hsl(217, 16%, 45%);
     cursor: pointer;
 }
+
+@media (max-width: 600px) {
+    .result-box {
+        width: 300px;
+    }
+}

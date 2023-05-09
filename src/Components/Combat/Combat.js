@@ -7,7 +7,13 @@ import scissors from "../../assets/images/icon-scissors.svg";
 import rock from "../../assets/images/icon-rock.svg";
 import { Result } from "../Result/Result";
 
-export const Combat = ({ selection, computer, setSelection, setScore, setComputer }) => {
+export const Combat = ({
+  selection,
+  computer,
+  setSelection,
+  setScore,
+  setComputer,
+}) => {
   const Paper = () => {
     return (
       <div className="combat-selection-box paper-box">
@@ -48,6 +54,7 @@ export const Combat = ({ selection, computer, setSelection, setScore, setCompute
           return prev - 1;
         });
       }
+      setResult(true);
     } else if (selection === "rock") {
       if (computer === "paper") {
         setResultData("lose");
@@ -60,6 +67,7 @@ export const Combat = ({ selection, computer, setSelection, setScore, setCompute
           return prev + 1;
         });
       }
+      setResult(true);
     } else if (selection === "scissors") {
       if (computer === "rock") {
         setResultData("lose");
@@ -72,29 +80,48 @@ export const Combat = ({ selection, computer, setSelection, setScore, setCompute
           return prev + 1;
         });
       }
+      setResult(true);
     }
   }, [computer]);
 
   return (
     <div
-      className="combat-box"
-      style={result ? { width: "60%" } : { width: "40%" }}
+      className="combat-box"    
     >
-      <div className="cobat-item">
+      <div className="combat-item">
         <p>You picked</p>
         {selection === "paper" && <Paper />}
         {selection === "rock" && <Rock />}
         {selection === "scissors" && <Scissors />}
       </div>
+      <div className="combat-result-box">
+        {result && (
+          <Result
+            resultData={resultData}
+            setSelection={setSelection}
+            setComputer={setComputer}
+            setResult={setResult}
+          />
+        )}
+      </div>
 
-      {result && <Result resultData={resultData} setSelection={setSelection} setComputer={setComputer} />}
-
-      <div className="cobat-item">
+      <div className="combat-item">
         <p>The house picked</p>
         {computer === "paper" && <Paper />}
         {computer === "rock" && <Rock />}
         {computer === "scissors" && <Scissors />}
         {computer === "" && <div className="combat-computer-loading"></div>}
+      </div>
+
+      <div className="combat-result-responsive-box">
+        {result && (
+          <Result
+            resultData={resultData}
+            setSelection={setSelection}
+            setComputer={setComputer}
+            setResult={setResult}
+          />
+        )}
       </div>
     </div>
   );
