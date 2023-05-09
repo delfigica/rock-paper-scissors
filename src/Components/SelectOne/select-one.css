@@ -1,0 +1,51 @@
+.select-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+    margin: 30px auto;
+    background-image: url("../../assets/images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;
+}
+
+.option-box {
+  background-color: white;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  padding: 1.5em;
+  margin: 20px 50px;
+  cursor: pointer;
+}
+
+.paper-box {
+  border: 15px solid hsl(230, 89%, 62%);
+}
+.paper-box:hover {
+  border: 15px solid hsl(230, 89%, 65%);
+
+} 
+.rock-box {
+  border: 15px solid hsl(349, 71%, 52%);
+}
+
+.rock-box:hover {
+  border: 15px solid hsl(349, 70%, 56%);
+
+}
+
+.scissors-box {
+  border: 15px solid hsl(39, 89%, 49%);
+}
+
+.scissors-box:hover {
+  border: 15px solid hsl(40, 84%, 53%);
+
+}
+
+
