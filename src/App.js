@@ -33,7 +33,13 @@ function App() {
       <ScoreBar score={score} />
 
       {selection ? (
-        <Combat selection={selection} computer={computer} />
+        <Combat
+          selection={selection}
+          computer={computer}
+          setSelection={setSelection}
+          setScore={setScore}
+          setComputer={setComputer}
+        />
       ) : (
         <SelectOne setSelection={setSelection} />
       )}

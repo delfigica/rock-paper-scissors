@@ -1,0 +1,24 @@
+.result-box {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-box h4 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin: 20px 0px;
+}
+
+.result-box button {
+    border-style: none;
+    width: 200px;
+    padding: 1em;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: hsl(217, 16%, 45%);
+    cursor: pointer;
+}
