@@ -1,8 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import './score-bar.css'
-export const ScoreBar = () => {
+import "./score-bar.css";
+
+import logo from "../../assets/images/logo.svg";
+export const ScoreBar = ({ score = 0 }) => {
   return (
-    <div>ScoreBar</div>
-  )
-}
+    <div className="score-box">
+      <div className="score-logo-box">
+        <img src={logo} />
+      </div>
+      <div className="score-total-box">
+        <p>SCORE</p>
+        <h3>{score}</h3>
+      </div>
+    </div>
+  );
+};

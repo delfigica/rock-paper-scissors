@@ -1,0 +1,34 @@
+.score-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1em;
+    width: 40%;
+    margin: auto;
+}
+
+.score-logo-box {
+    width: 120px;
+}
+
+.score-total-box {
+    background-color: white;
+    border-radius: 5px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-total-box p {
+    color: hsl(229, 64%, 46%);
+}
+
+.score-total-box h3 {
+    color: hsl(229, 25%, 31%);
+    font-size: 2.4em;
+}
