@@ -1,7 +1,8 @@
 import React from "react";
 
 import "./result.css";
-export const Result = ({ resultData = "win", setSelection, setComputer, setResult }) => {
+export const Result = ({ resultData, setSelection, setComputer, setResult }) => {
+
   const handleReset = () => {
     setSelection("");
     setComputer("");

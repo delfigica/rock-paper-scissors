@@ -5,7 +5,7 @@ import rulesImage from "../../assets/images/image-rules.svg";
 import close from "../../assets/images/icon-close.svg";
 
 export const Rules = () => {
-  const [openRules, setOpenRules] = useState(true);
+  const [openRules, setOpenRules] = useState(false);
 
   return (
     <>

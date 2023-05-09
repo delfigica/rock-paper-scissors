@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import "./combat.css";
 
-import paper from "../../assets/images/icon-paper.svg";
-import scissors from "../../assets/images/icon-scissors.svg";
-import rock from "../../assets/images/icon-rock.svg";
 import { Result } from "../Result/Result";
+import { Paper } from "../ElementsGame/Paper";
+import { Scissors } from "../ElementsGame/Scissors";
+import { Rock } from "../ElementsGame/Rock";
 
 export const Combat = ({
   selection,
@@ -14,80 +14,70 @@ export const Combat = ({
   setScore,
   setComputer,
 }) => {
-  const Paper = () => {
-    return (
-      <div className="combat-selection-box paper-box">
-        <img src={paper} />
-      </div>
-    );
-  };
-
-  const Scissors = () => {
-    return (
-      <div className="combat-selection-box scissors-box">
-        <img src={scissors} />
-      </div>
-    );
-  };
-
-  const Rock = () => {
-    return (
-      <div className="combat-selection-box rock-box">
-        <img src={rock} />
-      </div>
-    );
-  };
-
-  const [result, setResult] = useState(true);
+  const [result, setResult] = useState(false);
   const [resultData, setResultData] = useState("");
+
+  console.log(result);
 
   useEffect(() => {
     if (selection === "paper") {
       if (computer === "rock") {
-        setResultData("win");
+        setResultData(() => {
+          return "win";
+        });
         setScore((prev) => {
           return prev + 1;
         });
       } else if (computer === "scissors") {
-        setResultData("lose");
+        setResultData(() => {
+          return "lose";
+        });
         setScore((prev) => {
           return prev - 1;
         });
       }
-      setResult(true);
     } else if (selection === "rock") {
       if (computer === "paper") {
-        setResultData("lose");
+        setResultData(() => {
+          return "lose";
+        });
         setScore((prev) => {
           return prev - 1;
         });
       } else if (computer === "scissors") {
-        setResultData("win");
+        setResultData(() => {
+          return "win";
+        });
+
         setScore((prev) => {
           return prev + 1;
         });
       }
-      setResult(true);
     } else if (selection === "scissors") {
       if (computer === "rock") {
-        setResultData("lose");
+        setResultData(() => {
+          return "lose";
+        });
         setScore((prev) => {
           return prev - 1;
         });
       } else if (computer === "paper") {
-        setResult("win");
+        setResultData(() => {
+          return "win";
+        });
         setScore((prev) => {
           return prev + 1;
         });
       }
+    }
+
+    if (computer) {
       setResult(true);
     }
   }, [computer]);
 
   return (
-    <div
-      className="combat-box"    
-    >
+    <div className="combat-box">
       <div className="combat-item">
         <p>You picked</p>
         {selection === "paper" && <Paper />}
@@ -113,7 +103,10 @@ export const Combat = ({
         {computer === "" && <div className="combat-computer-loading"></div>}
       </div>
 
-      <div className="combat-result-responsive-box">
+      <div
+        className="combat-result-responsive-box"
+        style={result ? {} : { display: "none" }}
+      >
         {result && (
           <Result
             resultData={resultData}
